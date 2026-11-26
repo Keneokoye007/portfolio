@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kene Okoye, bilingual B2B business development and account management professional based in Paris.">
+  <title>Kene Okoye | Business Development &amp; Account Management</title>
+  <style>
+    :root { color-scheme: light; --ink:#211e1a; --dark:#151413; --cream:#f1e9dc; --accent:#dbc6a4; --muted:#655d51; --line:#d4c7b4; --paper:#f8f3ea; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:1.5rem; }
+    body { margin:0; font:1rem/1.75 system-ui,sans-serif; color:var(--ink); background:var(--cream); -webkit-font-smoothing:antialiased; }
+    ::selection { background:var(--accent); color:var(--dark); }
+    .wrap { width:min(1120px, calc(100% - 3rem)); margin:auto; }
+    header, .hero, footer { background:var(--dark); color:var(--cream); }
+    header { border-bottom:1px solid #39342d; }
+    nav, .footer-row { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; padding-block:1.4rem; }
+    nav div { display:flex; flex-wrap:wrap; gap:.65rem 1.35rem; }
+    a { color:inherit; text-underline-offset:.25em; }
+    nav a, .button { text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    a:focus-visible { outline:3px solid currentColor; outline-offset:5px; }
+    .brand { font-family:Georgia,serif; font-size:1.3rem; letter-spacing:-.025em; }
+    nav div a { font-size:.85rem; letter-spacing:.025em; padding-block:.3rem; }
+    .skip-link { position:absolute; top:.5rem; left:1rem; padding:.5rem 1rem; background:var(--cream); color:var(--dark); transform:translateY(-200%); z-index:2; }
+    .skip-link:focus { transform:translateY(0); }
+    .hero .wrap { padding-block:clamp(3rem, 6vw, 6rem); display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:3.5rem; align-items:center; }
+    .hero-portrait { margin:0; padding: .6rem; border:1px solid #6c5d49; background:#24211d; }
+    .hero-portrait img { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:50% 25%; filter:grayscale(.9) sepia(.1); }
+    .hero-portrait figcaption { padding:.65rem .4rem .2rem; color:#d7cebf; font-size:.75rem; letter-spacing:.06em; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; font-weight:650; }
+    .hero .eyebrow { color:var(--accent); }
+    h1,h2 { font-family:Georgia,serif; font-weight:400; line-height:1.04; margin:.3em 0; }
+    h1 { font-size:clamp(3.4rem, 8.5vw, 7.3rem); letter-spacing:-.055em; }
+    h2 { font-size:clamp(2.2rem, 4.5vw, 3.6rem); letter-spacing:-.04em; }
+    h3 { font-size:1.15rem; font-weight:600; line-height:1.35; margin:.4rem 0; letter-spacing:-.02em; }
+    p { max-width:64ch; }
+    .intro { font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:#d7cebf; max-width:58ch; margin-block:1.5rem 2rem; }
+    .button { display:inline-flex; align-items:center; gap:1rem; border:1px solid var(--dark); border-radius:3px; padding:.8rem 1.3rem; background:var(--dark); color:var(--cream); font-size:.9rem; font-weight:600; transition:background .18s,color .18s; }
+    .button::after { content:'\2197'; font-size:1.15rem; }
+    .button:hover { background:#3a332a; }
+    .hero .button { background:var(--accent); border-color:var(--accent); color:var(--dark); }
+    .hero .button:hover { background:var(--cream); }
+    .hero .button-secondary { background:transparent; border-color:var(--accent); color:var(--cream); }
+    .hero .button-secondary:hover { background:var(--accent); color:var(--dark); }
+    .button-download::after { content:'\2193'; }
+    .metric { display:flex; align-items:center; gap:1rem; margin-top:2rem; padding-top:1.3rem; border-top:1px solid #39342d; font-size:.85rem; color:#d7cebf; max-width:26rem; }
+    .metric strong { flex:none; color:var(--accent); font:3rem/1.1 Georgia,serif; letter-spacing:-.04em; }
+    .results-band { background:#e5d8c5; border-bottom:1px solid var(--line); padding-block:1.8rem 2rem; }
+    .results-band .eyebrow { color:var(--muted); margin:0 0 1.2rem; }
+    .results { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:0; }
+    .results > div { padding:0 2rem; border-left:1px solid #bdac92; }
+    .results > div:first-child { padding-left:0; border-left:0; }
+    .results dt { font-size:.85rem; color:var(--muted); }
+    .results dd { margin:.3rem 0 0; font:clamp(2.3rem,4vw,3.2rem)/1.15 Georgia,serif; letter-spacing:-.04em; }
+    .results small { display:block; margin-top:.45rem; font-size:.8rem; color:var(--muted); }
+    section { padding-block:clamp(2.8rem, 6vw, 5.5rem); }
+    section + section { border-top:1px solid var(--line); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.2rem; margin-top:2rem; }
+    article { padding:clamp(1.3rem, 3vw, 2rem); border:1px solid var(--line); border-radius:3px; background:var(--paper); }
+    article .eyebrow, .muted { color:var(--muted); }
+    article p:last-child { margin-bottom:0; color:var(--muted); }
+    .expertise-grid { grid-template-columns:repeat(3,minmax(0,1fr)); counter-reset:expertise; }
+    .expertise-grid article { counter-increment:expertise; padding:0; overflow:hidden; position:relative; }
+    .expertise-grid article::before { content:counter(expertise,decimal-leading-zero); position:absolute; top:1rem; left:1rem; z-index:1; padding:.3rem .6rem; background:var(--cream); color:var(--ink); font:.75rem/1.5 system-ui,sans-serif; letter-spacing:.12em; }
+    .expertise-image { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; filter:grayscale(.85) sepia(.18); }
+    .expertise-content { padding:1.5rem; }
+    .photo-credits { margin-top:1.2rem; font-size:.75rem; color:var(--muted); }
+    .section-intro { color:var(--muted); margin-top:1rem; }
+    #contact { padding-bottom:clamp(3.5rem,7vw,6rem); display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; gap:3rem; }
+    .contact-photo { margin:0; }
+    .contact-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; filter:grayscale(.9) sepia(.1); border:1px solid var(--line); }
+    #contact p { color:var(--muted); margin-bottom:1.5rem; }
+    .contact-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.75rem; }
+    .button-secondary { background:transparent; color:var(--ink); }
+    .button-secondary:hover { background:var(--accent); }
+    .footer-row { font-size:.85rem; color:#d7cebf; }
+    @media (max-width:900px) { .expertise-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .hero .wrap { grid-template-columns:1fr; gap:2.5rem; } .hero-portrait { width:min(100%,440px); } #contact { gap:2rem; } }
+    @media (max-width:680px) { .grid,#contact { grid-template-columns:1fr; } .metric { max-width:100%; } .wrap { width:calc(100% - 2rem); } .results { grid-template-columns:1fr; gap:1.2rem; } .results > div { padding:1.2rem 0 0; border-left:0; border-top:1px solid #bdac92; } .results > div:first-child { padding-top:0; border-top:0; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#top">Skip to content</a>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#top">Kene Okoye</a>
+      <div><a href="#experience">Experience</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div>
+    </nav>
+  </header>
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">B2B business development &amp; account management</p>
+          <h1>Kene Okoye</h1>
+          <p class="intro">I develop B2B accounts and turn complex customer needs into sales opportunities. I bring an engineering background to technology sales and work in English and French.</p>
+          <div class="contact-actions">
+            <a class="button" href="#contact">Connect with Kene</a>
+            <a class="button button-secondary button-download" href="assets/documents/kene-okoye-cv.pdf" download="Kene-Okoye-CV.pdf">Download CV</a>
+          </div>
+          <aside class="metric" aria-label="Sales result"><strong>109%</strong><span>of sales quota achieved at Verizon Business</span></aside>
+        </div>
+        <figure class="hero-portrait">
+          <img src="assets/images/kene-headshot.webp" alt="Kene Okoye in a suit" width="1100" height="1100" fetchpriority="high" decoding="async">
+          <figcaption>Kene Okoye · Paris, France</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="results-band" aria-label="Verizon Business sales results">
+      <div class="wrap">
+        <p class="eyebrow">Selected results · Verizon Business · 2024–2025</p>
+        <dl class="results">
+          <div><dt>Annual recurring revenue (ARR)</dt><dd>$436K</dd><small>B2B account portfolio</small></div>
+          <div><dt>New business</dt><dd>$272K</dd><small>109% of quota achieved</small></div>
+          <div><dt>Pipeline managed</dt><dd>$900K</dd><small>Sales opportunity pipeline</small></div>
+        </dl>
+      </div>
+    </div>
+    <div class="wrap">
+      <section id="experience">
+        <h2>Selected experience</h2>
+        <div class="grid">
+          <article>
+            <p class="eyebrow">Verizon Business · 2024–2025</p>
+            <h3>Growing B2B technology accounts</h3>
+            <p>Identified opportunities across customer subsidiaries, mapped decision-makers and tailored outreach to stakeholders across industries. Led discovery conversations for cybersecurity and networking solutions and helped prepare responses to international tenders.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Ley-Charis Nigeria · 2020–2022</p>
+            <h3>Managing projects from tender to delivery</h3>
+            <p>Managed eight construction projects, coordinated multidisciplinary teams and subcontractors, and handled client reporting, supplier negotiations and procurement.</p>
+          </article>
+        </div>
+      </section>
+      <section id="expertise">
+        <h2>How I work</h2>
+        <p class="section-intro">Six areas of expertise across business development, account growth and technology sales.</p>
+        <div class="grid expertise-grid">
+          <article>
+            <img class="expertise-image" src="assets/images/prospecting.jpg" alt="Professional researching accounts on a laptop in a modern office" width="900" height="600" loading="lazy" decoding="async">
+            <div class="expertise-content">
+            <h3>B2B prospecting and lead qualification</h3>
+            <p>Researching target accounts, mapping decision-makers and identifying opportunities across subsidiaries. Using phone, email and LinkedIn outreach to start conversations and qualify prospects against their needs.</p>
+            </div>
+          </article>
+          <article>
+            <img class="expertise-image" src="assets/images/discovery.jpg" alt="Colleagues discussing plans together around a laptop" width="900" height="600" loading="lazy" decoding="async">
+            <div class="expertise-content">
+            <h3>Consultative discovery and solution selling</h3>
+            <p>Leading discovery conversations to understand business challenges, priorities and buying processes. Tailoring value propositions to each industry and stakeholder, and connecting customer needs with relevant solutions.</p>
+            </div>
+          </article>
+          <article>
+            <img class="expertise-image" src="assets/images/relationships.jpg" alt="Business professionals reviewing information together during a meeting" width="900" height="600" loading="lazy" decoding="async">
+            <div class="expertise-content">
+            <h3>Account development and relationship management</h3>
+            <p>Building client relationships through regular follow-up and a clear understanding of account priorities. Coordinating with internal teams on opportunity plans, quotations and orders to keep business moving.</p>
+            </div>
+          </article>
+          <article>
+            <img class="expertise-image" src="assets/images/growth.jpg" alt="Professional analysing charts and business performance on a laptop" width="900" height="600" loading="lazy" decoding="async">
+            <div class="expertise-content">
+            <h3>Upselling and cross-selling</h3>
+            <p>Identifying additional needs within existing accounts and developing plans to expand relevant services. Exploring new subsidiaries and stakeholders to create opportunities for sustainable account growth.</p>
+            </div>
+          </article>
+          <article>
+            <img class="expertise-image" src="assets/images/pipeline.jpg" alt="Laptop displaying an analytics dashboard with charts and statistics" width="900" height="600" loading="lazy" decoding="async">
+            <div class="expertise-content">
+            <h3>CRM and pipeline management</h3>
+            <p>Using Salesforce and HubSpot to maintain accurate account, activity and opportunity records. Tracking deal progress, supporting forecasts and analysing outreach results to refine targeting and follow-up.</p>
+            </div>
+          </article>
+          <article>
+            <img class="expertise-image" src="assets/images/technology.jpg" alt="Computer screen displaying code and data charts" width="900" height="600" loading="lazy" decoding="async">
+            <div class="expertise-content">
+            <h3>Technology sales and tender support</h3>
+            <p>Bringing an engineering background to cybersecurity and networking sales. Translating technical capabilities into business value and supporting international tender responses through research, proposal preparation and team coordination.</p>
+            </div>
+          </article>
+        </div>
+        <p class="photo-credits">Illustrative photography from Unsplash:
+          <a href="https://unsplash.com/photos/man-working-on-laptop-in-modern-office-meeting-room-6PndD8S9XMw">Prospecting</a> ·
+          <a href="https://unsplash.com/photos/three-people-in-a-meeting-at-a-table-discussing-schedule-on-their-microsoft-laptop-FUGfBZDQOwI">Discovery</a> ·
+          <a href="https://unsplash.com/photos/two-businessmen-in-a-meeting-with-laptop-and-laptop-1gMIeDTl2u8">Relationships</a> ·
+          <a href="https://unsplash.com/photos/woman-working-on-laptop-with-charts-and-graphs-KNQUEQwTCY4">Growth</a> ·
+          <a href="https://unsplash.com/photos/a-laptop-screen-displays-data-analytics-charts-and-statistics-fDisDvdiqrQ">Pipeline</a> ·
+          <a href="https://unsplash.com/photos/laptop-screen-displaying-code-and-data-charts-GQOylIn892U">Technology</a>.
+        </p>
+      </section>
+      <section id="contact">
+        <figure class="contact-photo">
+          <img src="assets/images/kene-seated.webp" alt="Kene Okoye smiling while seated in an armchair" width="1200" height="800" loading="lazy" decoding="async">
+        </figure>
+        <div>
+        <h2>Let’s talk business</h2>
+        <p>For business development and account management roles, project inquiries, or conversations about B2B growth, reach out on LinkedIn or use the contact form.</p>
+        <div class="contact-actions">
+          <a class="button" href="https://www.linkedin.com/in/kene-okoye01/">Connect on LinkedIn</a>
+          <a class="button button-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScuPW3dNov2csbf04RB3wvjahwgCT53F1jnIrBl4T7dd1xnuA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Contact us</a>
+          <a class="button button-secondary button-download" href="assets/documents/kene-okoye-cv.pdf" download="Kene-Okoye-CV.pdf">Download CV</a>
+        </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap footer-row"><span>Kene Okoye</span><span>Paris, France · English &amp; French</span></div>
+  </footer>
+</body>
+</html>
